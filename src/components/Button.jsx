@@ -1,13 +1,16 @@
-const Button = ({ name, type }) => {
-  const onClickHandler = () => {
-    console.log(name);
-  };
-  const style = `btn btn-${type} w-75`;
+import React from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+function Button() {
+  const notify = () => toast("Wow so easy!");
+
   return (
-    <button className={style} onClick={onClickHandler}>
-      {name}
-    </button>
+    <div>
+      <ToastContainer />
+    </div>
   );
-};
+}
 
 export default Button;
